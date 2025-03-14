@@ -1,0 +1,27 @@
+<!-- 3. Write a program to bind the data using ng-model directive. Use ng-init, ng-repeat and 
+ng-include directives inside your program. -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="bindApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Binding Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="BindController">
+
+    <h3>Two-way Data Binding:</h3>
+    <input type="text" ng-model="name" placeholder="Enter your name">
+    <p>Hello, {{ name }}!</p>
+
+    <h3>List of Fruits (Using ng-repeat):</h3>
+    <ul>
+        <li ng-repeat="fruit in fruits">{{ fruit }}</li>
+    </ul>
+
+    <h3>Including External Content (Using ng-include):</h3>
+    <div ng-include="'include.html'"></div>
+
+</body>
+</html>
