@@ -1,0 +1,27 @@
+<!--      
+1. Write a program to evaluate expressions using {{ and }}. Create a text box and 
+change the background of text box when we give a color value.-->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="colorApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Expression Evaluation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="ColorController">
+
+    <h3>Expression Evaluation: {{ 10 + 20 }}</h3>
+
+    <label>Enter Color:</label>
+    <input type="text" ng-model="bgColor" placeholder="Enter color name or hex code" 
+           ng-style="{'background-color': bgColor}">
+
+</body>
+<script>
+    var app = angular.module('colorApp', []);
+    app.controller('ColorController', function ($scope) {
+        $scope.bgColor = '';
+    });
+</script>
+</html>
