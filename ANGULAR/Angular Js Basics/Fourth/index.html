@@ -1,0 +1,24 @@
+<!-- 
+4. What is a scope and program with $scope and $rootScope. -->
+<!DOCTYPE html>
+<html lang="en" ng-app="scopeApp">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Scope Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <div ng-controller="MainController">
+        <h3>Main Controller Scope: {{ message }}</h3>
+        <h3>Global Root Scope: {{ globalMessage }}</h3>
+
+        <div ng-controller="ChildController">
+            <h3>Child Controller Scope: {{ childMessage }}</h3>
+            <h3>Accessing Root Scope from Child: {{ globalMessage }}</h3>
+        </div>
+    </div>
+
+</body>
+</html>
